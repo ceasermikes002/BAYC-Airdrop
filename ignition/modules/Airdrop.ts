@@ -14,7 +14,7 @@ const deployMerkleAirdrop = async () => {
     const BAYCAddress = '0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d'; // BAYC NFT address
 
     // Get the Merkle Airdrop contract factory
-    const MerkleAirdrop = await ethers.getContractFactory("BAYCAirdrop.sol");
+    const MerkleAirdrop = await ethers.getContractFactory("MerkleAirdrop");
 
     // Deploy the contract
     const merkleAirdrop:any = await MerkleAirdrop.deploy(tokenAddress, merkleData.root, BAYCAddress);
